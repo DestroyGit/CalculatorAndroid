@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textsize_25">25sp</dimen>
+    <dimen name="bottom_margin_5">5dp</dimen>
+    <dimen name="inset_0">0dp</dimen>
+    <dimen name="button_equally_0dp">0dp</dimen>
+    <dimen name="inset_5">5dp</dimen>
+    <dimen name="textsize_32">32sp</dimen>
+    <dimen name="calc_0dp">0dp</dimen>
+    <dimen name="calc_margin_25dp">25dp</dimen>
+</resources>
