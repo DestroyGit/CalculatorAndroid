@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.Calculator" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimary">@color/dark_sand</item>
+        <item name="colorPrimaryVariant">@color/light_sand</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
@@ -13,4 +13,21 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="ShadowButtonsNumbers">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">@color/cardview_shadow_start_color</item>
+        <item name="android:textSize">@dimen/textsize_32</item>
+        <item name="android:layout_marginEnd">@dimen/margin_2</item>
+    </style>
+
+    <style name="ShadowButtonsSymbols">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">@color/shadow_white</item>
+        <item name="android:textColor">@color/shadow_brown</item>
+        <item name="android:textSize">@dimen/textsize_32</item>
+    </style>
+
 </resources>

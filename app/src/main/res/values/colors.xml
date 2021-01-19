@@ -11,4 +11,6 @@
     <color name="shadow_white">#48EBEDF4</color>
     <color name="symbols_gray_red">#6C6565</color>
     <color name="shadow_brown">#DA330303</color>
+    <color name="dark_sand">#AFAA79</color>
+    <color name="light_sand">#E8E1A7</color>
 </resources>

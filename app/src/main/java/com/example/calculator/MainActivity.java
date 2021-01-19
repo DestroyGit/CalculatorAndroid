@@ -1,5 +1,6 @@
 package com.example.calculator;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,7 +13,7 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView calculator;
-    private Calculation calculation;
+    private Calculation calculation = new Calculation();
     private Button button0;
     private Button button1;
     private Button button2;
@@ -36,8 +37,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        calculation = new Calculation();
         initViews();
+        Typeface tf = Typeface.createFromAsset(getAssets(),"fonts/TimesNewRomanEcofontBoldItalic.ttf");
+        TextView calcView = findViewById(R.id.calc);
+        calcView.setTypeface(tf);
     }
 
     @Override

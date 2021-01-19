@@ -8,40 +8,26 @@ public class Calculation {
     private double firstNumber = 0;
     private double secondNumber = 0;
     private String number = "";
-    private String number0;
-    private String number1;
-    private String number2;
-    private String number3;
-    private String number4;
-    private String number5;
-    private String number6;
-    private String number7;
-    private String number8;
-    private String number9;
-    private String symbolPoi;
-    final private char symbolPlus = '+';
-    final private char symbolMin = '-';
-    final private char symbolMul = '*';
-    final private char symbolDiv = '=';
+    private String number0 = "0";
+    private String number1 = "1";
+    private String number2 = "2";
+    private String number3 = "3";
+    private String number4 = "4";
+    private String number5 = "5";
+    private String number6 = "6";
+    private String number7 = "7";
+    private String number8 = "8";
+    private String number9 = "9";
+    private String symbolPoi = ".";
+    private final char symbolPlus = '+';
+    private final char symbolMin = '-';
+    private final char symbolMul = '*';
+    private final char symbolDiv = '=';
     private char usingSymbol;
     private boolean isSymbol = false;
     private double resultNumber = 0;
     private String error0 = "ERROR: деление на ноль";
     private int countPoint = 0;
-
-    public Calculation() {
-        number0 = "0";
-        number1 = "1";
-        number2 = "2";
-        number3 = "3";
-        number4 = "4";
-        number5 = "5";
-        number6 = "6";
-        number7 = "7";
-        number8 = "8";
-        number9 = "9";
-        symbolPoi = ".";
-    }
 
     public int getCountPoint() {
         return countPoint;
