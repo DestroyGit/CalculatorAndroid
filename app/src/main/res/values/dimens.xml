@@ -8,4 +8,5 @@
     <dimen name="textsize_32">32sp</dimen>
     <dimen name="calc_0dp">0dp</dimen>
     <dimen name="calc_margin_25dp">25dp</dimen>
+    <dimen name="textcalc_25sp">25sp</dimen>
 </resources>

@@ -13,6 +13,8 @@
         android:layout_height="@dimen/calc_0dp"
         android:inputType="number"
         android:gravity="end"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textcalc_25sp"
         app:layout_constraintBottom_toTopOf="@+id/number7"
         app:layout_constraintEnd_toEndOf="@id/symbol_div"
         app:layout_constraintStart_toStartOf="@id/number7"
