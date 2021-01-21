@@ -4,17 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/wood">
+    android:background="@drawable/papirus">
 
-    <EditText
+    <TextView
         android:id="@+id/calc"
         android:layout_marginTop="@dimen/calc_margin_25dp"
         android:layout_width="@dimen/calc_0dp"
         android:layout_height="@dimen/calc_0dp"
-        android:inputType="number"
         android:gravity="end"
-        android:textColor="@color/white"
-        android:textSize="@dimen/textcalc_25sp"
+        android:textColor="@color/black"
+        android:textColorLink="@color/cardview_shadow_start_color"
+        android:textSize="@dimen/textcalc_30sp"
         app:layout_constraintBottom_toTopOf="@+id/number7"
         app:layout_constraintEnd_toEndOf="@id/symbol_div"
         app:layout_constraintStart_toStartOf="@id/number7"
@@ -23,11 +23,8 @@
 
     <Button
         android:id="@+id/number8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/cardview_shadow_start_color"
+        style="@style/ShadowButtonsNumbers"
         android:text="@string/num_8"
-        android:textSize="@dimen/textsize_32"
         app:layout_constraintBottom_toTopOf="@+id/number5"
         app:layout_constraintEnd_toStartOf="@+id/number9"
         app:layout_constraintStart_toEndOf="@+id/number7"
@@ -38,11 +35,8 @@
 
     <Button
         android:id="@+id/number7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/cardview_shadow_start_color"
+        style="@style/ShadowButtonsNumbers"
         android:text="@string/num_7"
-        android:textSize="@dimen/textsize_32"
         app:layout_constraintBottom_toTopOf="@+id/number4"
         app:layout_constraintEnd_toStartOf="@+id/number8"
         app:layout_constraintHorizontal_chainStyle="packed"
@@ -53,11 +47,8 @@
 
     <Button
         android:id="@+id/number9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/cardview_shadow_start_color"
+        style="@style/ShadowButtonsNumbers"
         android:text="@string/num_9"
-        android:textSize="@dimen/textsize_32"
         app:layout_constraintBottom_toTopOf="@+id/number6"
         app:layout_constraintEnd_toStartOf="@+id/symbol_div"
         app:layout_constraintStart_toEndOf="@+id/number8"
@@ -67,12 +58,8 @@
 
     <Button
         android:id="@+id/symbol_div"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/shadow_white"
+        style="@style/ShadowButtonsSymbols"
         android:text="@string/symbol_div"
-        android:textColor="@color/shadow_brown"
-        android:textSize="@dimen/textsize_32"
         app:layout_constraintBottom_toTopOf="@+id/symbol_mul"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/number9"
@@ -82,11 +69,8 @@
 
     <Button
         android:id="@+id/number4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/cardview_shadow_start_color"
+        style="@style/ShadowButtonsNumbers"
         android:text="@string/num_4"
-        android:textSize="@dimen/textsize_32"
         app:layout_constraintBottom_toTopOf="@+id/number1"
         app:layout_constraintEnd_toStartOf="@+id/number5"
         app:layout_constraintHorizontal_chainStyle="packed"
@@ -95,11 +79,8 @@
 
     <Button
         android:id="@+id/number5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/cardview_shadow_start_color"
+        style="@style/ShadowButtonsNumbers"
         android:text="@string/num_5"
-        android:textSize="@dimen/textsize_32"
         app:layout_constraintBottom_toTopOf="@+id/number2"
         app:layout_constraintEnd_toStartOf="@+id/number6"
         app:layout_constraintStart_toEndOf="@+id/number4"
@@ -107,11 +88,8 @@
 
     <Button
         android:id="@+id/number6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/cardview_shadow_start_color"
+        style="@style/ShadowButtonsNumbers"
         android:text="@string/num_6"
-        android:textSize="@dimen/textsize_32"
         app:layout_constraintBottom_toTopOf="@+id/number3"
         app:layout_constraintEnd_toStartOf="@+id/symbol_mul"
         app:layout_constraintStart_toEndOf="@+id/number5"
@@ -119,12 +97,8 @@
 
     <Button
         android:id="@+id/symbol_mul"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/shadow_white"
+        style="@style/ShadowButtonsSymbols"
         android:text="@string/symbol_mul"
-        android:textColor="@color/shadow_brown"
-        android:textSize="@dimen/textsize_32"
         app:layout_constraintBottom_toTopOf="@+id/symbol_min"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/number6"
@@ -132,11 +106,8 @@
 
     <Button
         android:id="@+id/number1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/cardview_shadow_start_color"
+        style="@style/ShadowButtonsNumbers"
         android:text="@string/num_1"
-        android:textSize="@dimen/textsize_32"
         app:layout_constraintBottom_toTopOf="@+id/symbol_per"
         app:layout_constraintEnd_toStartOf="@+id/number2"
         app:layout_constraintHorizontal_chainStyle="packed"
@@ -145,11 +116,8 @@
 
     <Button
         android:id="@+id/number2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/cardview_shadow_start_color"
+        style="@style/ShadowButtonsNumbers"
         android:text="@string/num_2"
-        android:textSize="@dimen/textsize_32"
         app:layout_constraintBottom_toTopOf="@+id/number0"
         app:layout_constraintEnd_toStartOf="@+id/number3"
         app:layout_constraintStart_toEndOf="@+id/number1"
@@ -157,11 +125,8 @@
 
     <Button
         android:id="@+id/number3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/cardview_shadow_start_color"
+        style="@style/ShadowButtonsNumbers"
         android:text="@string/num_3"
-        android:textSize="@dimen/textsize_32"
         app:layout_constraintBottom_toTopOf="@+id/symbol_poi"
         app:layout_constraintEnd_toStartOf="@+id/symbol_min"
         app:layout_constraintStart_toEndOf="@+id/number2"
@@ -169,12 +134,8 @@
 
     <Button
         android:id="@+id/symbol_min"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/shadow_white"
+        style="@style/ShadowButtonsSymbols"
         android:text="@string/symbol_minus"
-        android:textColor="@color/shadow_brown"
-        android:textSize="@dimen/textsize_32"
         app:layout_constraintBottom_toBottomOf="@+id/symbol_plus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/number3"
@@ -182,12 +143,9 @@
 
     <Button
         android:id="@+id/symbol_per"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/shadow_white"
+        style="@style/ShadowButtonsSymbols"
         android:text="@string/symbol_percent"
-        android:textColor="@color/shadow_brown"
-        android:textSize="@dimen/textsize_32"
+        android:layout_marginEnd="@dimen/margin_2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/number0"
         app:layout_constraintHorizontal_chainStyle="packed"
@@ -196,11 +154,8 @@
 
     <Button
         android:id="@+id/number0"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/cardview_shadow_start_color"
+        style="@style/ShadowButtonsNumbers"
         android:text="@string/num_0"
-        android:textSize="@dimen/textsize_32"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/symbol_poi"
         app:layout_constraintStart_toEndOf="@+id/symbol_per"
@@ -208,12 +163,9 @@
 
     <Button
         android:id="@+id/symbol_poi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/shadow_white"
+        style="@style/ShadowButtonsSymbols"
         android:text="@string/symbol_point"
-        android:textColor="@color/shadow_brown"
-        android:textSize="@dimen/textsize_32"
+        android:layout_marginEnd="@dimen/margin_2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/symbol_plus"
         app:layout_constraintStart_toEndOf="@+id/number0"
@@ -221,12 +173,8 @@
 
     <Button
         android:id="@+id/symbol_plus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/shadow_white"
+        style="@style/ShadowButtonsSymbols"
         android:text="@string/symbol_plus"
-        android:textColor="@color/shadow_brown"
-        android:textSize="@dimen/textsize_32"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/symbol_poi"
@@ -239,6 +187,7 @@
         android:backgroundTint="@color/shadow_red"
         android:text="@string/symbol_c"
         android:textSize="@dimen/textsize_32"
+        android:layout_marginEnd="@dimen/margin_2"
         app:layout_constraintEnd_toStartOf="@+id/symbol_equ"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="@id/symbol_per"
@@ -247,11 +196,9 @@
     <Button
         android:id="@+id/symbol_equ"
         android:layout_width="@dimen/button_equally_0dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/shadow_white"
+        style="@style/ShadowButtonsSymbols"
         android:text="@string/symbol_equally"
-        android:textColor="@color/shadow_brown"
-        android:textSize="@dimen/textsize_32"
+        android:layout_marginEnd="@dimen/calc_0dp"
         app:layout_constraintEnd_toEndOf="@id/symbol_plus"
         app:layout_constraintStart_toEndOf="@+id/symbol_clear"
         app:layout_constraintTop_toBottomOf="@+id/number0" />
