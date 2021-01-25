@@ -13,4 +13,5 @@
     <color name="shadow_brown">#DA330303</color>
     <color name="dark_sand">#AFAA79</color>
     <color name="light_sand">#E8E1A7</color>
+    <color name="shadow_gray">#19000000</color>
 </resources>
