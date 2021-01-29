@@ -8,177 +8,216 @@
 
     <TextView
         android:id="@+id/calc"
-        android:layout_marginTop="@dimen/calc_margin_25dp"
+        android:layout_marginTop="@dimen/calc_0dp"
         android:layout_width="@dimen/calc_0dp"
         android:layout_height="@dimen/calc_0dp"
         android:gravity="end"
         android:textColor="@color/black"
         android:textColorLink="@color/cardview_shadow_start_color"
         android:textSize="@dimen/textcalc_30sp"
-        app:layout_constraintBottom_toTopOf="@+id/number7"
+        app:layout_constraintBottom_toTopOf="@id/settings"
         app:layout_constraintEnd_toEndOf="@id/symbol_div"
         app:layout_constraintStart_toStartOf="@id/number7"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
         />
 
     <Button
+        android:id="@+id/settings"
+        android:layout_width="@dimen/calc_0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/settings"
+        android:backgroundTint="@color/shadow_gray"
+        app:layout_constraintBottom_toTopOf="@id/number7"
+        app:layout_constraintEnd_toEndOf="@id/calc"
+        app:layout_constraintStart_toStartOf="@id/calc"
+        app:layout_constraintTop_toBottomOf="@id/calc"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <Button
         android:id="@+id/number8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         style="@style/ShadowButtonsNumbers"
         android:text="@string/num_8"
-        app:layout_constraintBottom_toTopOf="@+id/number5"
-        app:layout_constraintEnd_toStartOf="@+id/number9"
-        app:layout_constraintStart_toEndOf="@+id/number7"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.8"
+        app:layout_constraintBottom_toTopOf="@id/number5"
+        app:layout_constraintEnd_toStartOf="@id/number9"
+        app:layout_constraintStart_toEndOf="@id/number7"
+        app:layout_constraintTop_toTopOf="@id/number7"
         app:layout_constraintVertical_chainStyle="packed" />
 
 
     <Button
         android:id="@+id/number7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         style="@style/ShadowButtonsNumbers"
         android:text="@string/num_7"
-        app:layout_constraintBottom_toTopOf="@+id/number4"
-        app:layout_constraintEnd_toStartOf="@+id/number8"
+        app:layout_constraintBottom_toTopOf="@id/number4"
+        app:layout_constraintEnd_toStartOf="@id/number8"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.8"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <Button
         android:id="@+id/number9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         style="@style/ShadowButtonsNumbers"
         android:text="@string/num_9"
-        app:layout_constraintBottom_toTopOf="@+id/number6"
-        app:layout_constraintEnd_toStartOf="@+id/symbol_div"
-        app:layout_constraintStart_toEndOf="@+id/number8"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.8"
+        app:layout_constraintBottom_toTopOf="@id/number6"
+        app:layout_constraintEnd_toStartOf="@id/symbol_div"
+        app:layout_constraintStart_toEndOf="@id/number8"
+        app:layout_constraintTop_toTopOf="@id/number8"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <Button
         android:id="@+id/symbol_div"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         style="@style/ShadowButtonsSymbols"
         android:text="@string/symbol_div"
-        app:layout_constraintBottom_toTopOf="@+id/symbol_mul"
+        app:layout_constraintBottom_toTopOf="@id/symbol_mul"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/number9"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.8"
+        app:layout_constraintStart_toEndOf="@id/number9"
+        app:layout_constraintTop_toTopOf="@id/number9"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <Button
         android:id="@+id/number4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         style="@style/ShadowButtonsNumbers"
         android:text="@string/num_4"
-        app:layout_constraintBottom_toTopOf="@+id/number1"
-        app:layout_constraintEnd_toStartOf="@+id/number5"
+        app:layout_constraintBottom_toTopOf="@id/number1"
+        app:layout_constraintEnd_toStartOf="@id/number5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/number7" />
+        app:layout_constraintTop_toBottomOf="@id/number7" />
 
     <Button
         android:id="@+id/number5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         style="@style/ShadowButtonsNumbers"
         android:text="@string/num_5"
-        app:layout_constraintBottom_toTopOf="@+id/number2"
-        app:layout_constraintEnd_toStartOf="@+id/number6"
-        app:layout_constraintStart_toEndOf="@+id/number4"
-        app:layout_constraintTop_toBottomOf="@+id/number8" />
+        app:layout_constraintBottom_toTopOf="@id/number2"
+        app:layout_constraintEnd_toStartOf="@id/number6"
+        app:layout_constraintStart_toEndOf="@id/number4"
+        app:layout_constraintTop_toBottomOf="@id/number8" />
 
     <Button
         android:id="@+id/number6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         style="@style/ShadowButtonsNumbers"
         android:text="@string/num_6"
-        app:layout_constraintBottom_toTopOf="@+id/number3"
-        app:layout_constraintEnd_toStartOf="@+id/symbol_mul"
-        app:layout_constraintStart_toEndOf="@+id/number5"
-        app:layout_constraintTop_toBottomOf="@+id/number9" />
+        app:layout_constraintBottom_toTopOf="@id/number3"
+        app:layout_constraintEnd_toStartOf="@id/symbol_mul"
+        app:layout_constraintStart_toEndOf="@id/number5"
+        app:layout_constraintTop_toBottomOf="@id/number9" />
 
     <Button
         android:id="@+id/symbol_mul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         style="@style/ShadowButtonsSymbols"
         android:text="@string/symbol_mul"
-        app:layout_constraintBottom_toTopOf="@+id/symbol_min"
+        app:layout_constraintBottom_toTopOf="@id/symbol_min"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/number6"
-        app:layout_constraintTop_toBottomOf="@+id/symbol_div" />
+        app:layout_constraintStart_toEndOf="@id/number6"
+        app:layout_constraintTop_toBottomOf="@id/symbol_div" />
 
     <Button
         android:id="@+id/number1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         style="@style/ShadowButtonsNumbers"
         android:text="@string/num_1"
-        app:layout_constraintBottom_toTopOf="@+id/symbol_per"
-        app:layout_constraintEnd_toStartOf="@+id/number2"
+        app:layout_constraintBottom_toTopOf="@id/symbol_per"
+        app:layout_constraintEnd_toStartOf="@id/number2"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/number4" />
+        app:layout_constraintTop_toBottomOf="@id/number4" />
 
     <Button
         android:id="@+id/number2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         style="@style/ShadowButtonsNumbers"
         android:text="@string/num_2"
-        app:layout_constraintBottom_toTopOf="@+id/number0"
-        app:layout_constraintEnd_toStartOf="@+id/number3"
-        app:layout_constraintStart_toEndOf="@+id/number1"
-        app:layout_constraintTop_toBottomOf="@+id/number5" />
+        app:layout_constraintBottom_toTopOf="@id/number0"
+        app:layout_constraintEnd_toStartOf="@id/number3"
+        app:layout_constraintStart_toEndOf="@id/number1"
+        app:layout_constraintTop_toBottomOf="@id/number5" />
 
     <Button
         android:id="@+id/number3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         style="@style/ShadowButtonsNumbers"
         android:text="@string/num_3"
-        app:layout_constraintBottom_toTopOf="@+id/symbol_poi"
-        app:layout_constraintEnd_toStartOf="@+id/symbol_min"
-        app:layout_constraintStart_toEndOf="@+id/number2"
-        app:layout_constraintTop_toBottomOf="@+id/number6" />
+        app:layout_constraintBottom_toTopOf="@id/symbol_poi"
+        app:layout_constraintEnd_toStartOf="@id/symbol_min"
+        app:layout_constraintStart_toEndOf="@id/number2"
+        app:layout_constraintTop_toBottomOf="@id/number6" />
 
     <Button
         android:id="@+id/symbol_min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         style="@style/ShadowButtonsSymbols"
         android:text="@string/symbol_minus"
-        app:layout_constraintBottom_toBottomOf="@+id/symbol_plus"
+        app:layout_constraintBottom_toBottomOf="@id/symbol_plus"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/number3"
-        app:layout_constraintTop_toBottomOf="@+id/symbol_mul" />
+        app:layout_constraintStart_toEndOf="@id/number3"
+        app:layout_constraintTop_toBottomOf="@id/symbol_mul" />
 
     <Button
         android:id="@+id/symbol_per"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         style="@style/ShadowButtonsSymbols"
         android:text="@string/symbol_percent"
         android:layout_marginEnd="@dimen/margin_2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/number0"
+        app:layout_constraintEnd_toStartOf="@id/number0"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/number1" />
+        app:layout_constraintTop_toBottomOf="@id/number1" />
 
     <Button
         android:id="@+id/number0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         style="@style/ShadowButtonsNumbers"
         android:text="@string/num_0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/symbol_poi"
-        app:layout_constraintStart_toEndOf="@+id/symbol_per"
-        app:layout_constraintTop_toBottomOf="@+id/number2"/>
+        app:layout_constraintEnd_toStartOf="@id/symbol_poi"
+        app:layout_constraintStart_toEndOf="@id/symbol_per"
+        app:layout_constraintTop_toBottomOf="@id/number2"/>
 
     <Button
         android:id="@+id/symbol_poi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         style="@style/ShadowButtonsSymbols"
         android:text="@string/symbol_point"
         android:layout_marginEnd="@dimen/margin_2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/symbol_plus"
-        app:layout_constraintStart_toEndOf="@+id/number0"
-        app:layout_constraintTop_toBottomOf="@+id/number3" />
+        app:layout_constraintBottom_toBottomOf="@id/number0"
+        app:layout_constraintEnd_toStartOf="@id/symbol_plus"
+        app:layout_constraintStart_toEndOf="@id/number0"
+        app:layout_constraintTop_toBottomOf="@id/number3" />
 
     <Button
         android:id="@+id/symbol_plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         style="@style/ShadowButtonsSymbols"
         android:text="@string/symbol_plus"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/symbol_poi"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/symbol_poi"
-        app:layout_constraintTop_toBottomOf="@+id/symbol_min" />
+        app:layout_constraintStart_toEndOf="@id/symbol_poi"
+        app:layout_constraintTop_toBottomOf="@id/symbol_min" />
 
     <Button
         android:id="@+id/symbol_clear"
@@ -186,22 +225,23 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/shadow_red"
         android:text="@string/symbol_c"
-        android:textSize="@dimen/textsize_32"
         android:layout_marginEnd="@dimen/margin_2"
-        app:layout_constraintEnd_toStartOf="@+id/symbol_equ"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/symbol_equ"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="@id/symbol_per"
-        app:layout_constraintTop_toBottomOf="@+id/symbol_per" />
+        app:layout_constraintTop_toBottomOf="@id/symbol_per" />
 
     <Button
         android:id="@+id/symbol_equ"
         android:layout_width="@dimen/button_equally_0dp"
+        android:layout_height="wrap_content"
         style="@style/ShadowButtonsSymbols"
         android:text="@string/symbol_equally"
         android:layout_marginEnd="@dimen/calc_0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/symbol_plus"
-        app:layout_constraintStart_toEndOf="@+id/symbol_clear"
-        app:layout_constraintTop_toBottomOf="@+id/number0" />
-
+        app:layout_constraintStart_toEndOf="@id/symbol_clear"
+        app:layout_constraintTop_toBottomOf="@id/number0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

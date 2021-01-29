@@ -1,16 +1,32 @@
 package com.example.calculator;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.radiobutton.MaterialRadioButton;
 
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    // Имя настроек
+    private static final String nameSharedPreference = "LOGIN";
+
+    // Имя параметра в настройках
+    private static final String calculat = "CALCULAT";
+
+    private static final int lightTheme = 0;
+    private static final int darkTheme = 1;
+
+    private static final int REQUEST_CODE = 99;
 
     private TextView calculator;
     private Calculation calculation = new Calculation();
@@ -31,21 +47,67 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button buttonEqu;
     private Button buttonPoi;
     private Button buttonPer;
+    private Button buttonSet;
     private Button buttonClear;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(getAppTheme(R.style.LightTheme)); // установка темы
         setContentView(R.layout.activity_main);
         initViews();
-        Typeface tf = Typeface.createFromAsset(getAssets(),"fonts/TimesNewRomanEcofontBoldItalic.ttf");
+        setTTF(); // установка шрифта для цифр в табло калькулятора
+    }
+
+    // применяем тему в главной активити
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_CODE) {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
+        if (resultCode == RESULT_CANCELED) {
+            recreate();
+        }
+    }
+
+    // шрифт для табло калькулятора
+    private void setTTF() {
+        Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/TimesNewRomanEcofontBoldItalic.ttf");
         TextView calcView = findViewById(R.id.calc);
         calcView.setTypeface(tf);
     }
 
+    private int getAppTheme(int codeStyle) {
+        return codeStyleToStyleId(getCodeStyle(codeStyle));
+    }
+
+    private int codeStyleToStyleId(int codeStyle) {
+        switch (codeStyle) {
+            case darkTheme:
+                return R.style.DarkTheme;
+            case lightTheme:
+                return R.style.LightTheme;
+            default:
+                return R.style.LightTheme;
+        }
+    }
+
+    // Чтение настроек, параметр «тема»
+    private int getCodeStyle(int codeStyle) {
+        // Работаем через специальный класс сохранения и чтения настроек
+        SharedPreferences sharedPref = getSharedPreferences(nameSharedPreference, MODE_PRIVATE);
+        //Прочитать тему, если настройка не найдена - взять по умолчанию
+        return sharedPref.getInt(calculat, codeStyle);
+    }
+
+    // обработка нажатия на кнопки
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.settings:
+                Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+                startActivityForResult(intent, REQUEST_CODE);
             case R.id.number0:
                 calculation.addNumber(calculation.getNumber0());
                 setTextCalculator(calculation.getNumber());
@@ -129,6 +191,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    // блокировка кнопок после возникающих ошибок (напирмер, деление на ноль)
     private void blockButtons(boolean block) {
         button0.setEnabled(block);
         button1.setEnabled(block);
@@ -149,12 +212,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonEqu.setEnabled(block);
     }
 
+    // блокировка кнопки ТОЧКА, чтобы не задваивалась в табло калькулятора
     private void blockButtonPoint(boolean block) {
         buttonPoi.setEnabled(!block);
     }
 
     private void initViews() {
         calculator = findViewById(R.id.calc);
+        initButtonSet();
         initButton0();
         initButton1();
         initButton2();
@@ -175,8 +240,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         initButtonClear();
     }
 
+    // печать символов на табло калькулятора
     private void setTextCalculator(String number) {
         calculator.setText(String.format(Locale.getDefault(), "%s", number));
+    }
+
+    //инициализация кнопок
+    private void initButtonSet() {
+        buttonSet = findViewById(R.id.settings);
+        buttonSet.setOnClickListener(this);
     }
 
     private void initButton0() {
